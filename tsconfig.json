@@ -23,7 +23,14 @@
     "paths": {
       "app/*": ["src/app/*"],
       "components/*": ["src/components/*"],
-      "hooks/*": ["src/hooks/*"]
+      "data/*": ["src/data/*"],
+      "helpers/*": ["src/helpers/*"],
+      "hooks/*": ["src/hooks/*"],
+      "layouts/*": ["src/layouts/*"],
+      "lib/*": ["src/lib/*"],
+      "pages/*": ["src/pages/*"],
+      "types/*": ["src/types/*"],
+      "utils/*": ["src/utils/*"],
     }
   },
   "include": ["src"],
