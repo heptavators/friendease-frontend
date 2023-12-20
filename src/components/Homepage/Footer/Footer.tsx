@@ -1,7 +1,7 @@
-import { 
-  Box, 
-  Stack, 
-  styled, 
+import {
+  Box,
+  Stack,
+  styled,
   Typography,
 } from '@mui/material'
 import Link from '@mui/material/Link';
@@ -12,7 +12,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 
 const Footer = () => {
 
-  const StackColumn = styled(Stack) (() => ({
+  const StackColumn = styled(Stack)(() => ({
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'center',
@@ -21,11 +21,8 @@ const Footer = () => {
     textAlign: 'center',
   }));
 
-  const BoxRow = styled(Box) (({ theme }) => ({
-    display: 'flex',
-    flexDirection: 'row',
+  const BoxRow = styled(Box)(({ theme }) => ({
     backgroundColor: '#ededed',
-    flex: 1,
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
       gap: 30,
@@ -33,77 +30,65 @@ const Footer = () => {
   }));
 
   return (
-    
-    <BoxRow 
-    component = 'footer'
-    sx={{
-      py: 4,
-      px: 2,
-    }}
-    >
-      <StackColumn>
-        <FooterTitle text={'address'} />
-        <FooterLink 
-        text={'15th Louis St, london 92382, eng'} 
-        />
-        <FooterLink 
-        text={'25 999-345-10800'} 
-        />
-        <FooterLink 
-        text={'info@housesales.com'} 
-        />
-      </StackColumn>
-      
-      <StackColumn>
-        <FooterTitle text={'our services'} />
-        <FooterLink text={'buy house'} />
-        <FooterLink text={'sell house'} />
-        <FooterLink text={'rent house'} />
-        <FooterLink text={'build house'} />
-      </StackColumn>
-      <StackColumn>
-        <FooterTitle text={'our company'} />
-        <FooterLink text={'reporting'} />
-        <FooterLink text={'get in touch'} />
-        <FooterLink text={'management'} />
-      </StackColumn>
 
-      <StackColumn>
-        <FooterTitle text={'hBSales'} />
-        <Stack 
-        direction='row' 
-        width= '70px'
-        maxWidth='100%'
-        justifyContent='space-between'
-        >
-          <Link href="#" variant="body2" 
-          sx={{
-            color: '#414141',
-            "&:hover": {
-              color: '#1c2859',
-            }
-          }}
+    <BoxRow
+      component='footer'
+      sx={{
+        py: 4,
+        px: 2,
+      }}
+    >
+      <div className='max-w-7xl flex flex-col sm:flex-row mx-auto'>
+        <StackColumn>
+          <FooterTitle text={'Alamat'} />
+          <FooterLink
+            text={'info@friendease.id'}
+          />
+        </StackColumn>
+
+        <StackColumn>
+          <FooterTitle text={'Layanan Kami'} />
+          <FooterLink text={'Daftar sebagai talent'} />
+          <FooterLink text={'Cari Teman Jalan'} />
+        </StackColumn>
+
+        <StackColumn>
+          <FooterTitle text={'hBSales'} />
+          <Stack
+            direction='row'
+            width='70px'
+            maxWidth='100%'
+            justifyContent='space-between'
           >
-            <InstagramIcon />  
-          </Link> 
-          <Link href="#"variant="body2" 
-          sx={{
-            color: '#414141',
-            "&:hover": {
-              color: '#1c2859',
-            }
-          }}
+            <Link href="#" variant="body2"
+              sx={{
+                color: '#414141',
+                "&:hover": {
+                  color: '#1c2859',
+                }
+              }}
+            >
+              <InstagramIcon />
+            </Link>
+            <Link href="#" variant="body2"
+              sx={{
+                color: '#414141',
+                "&:hover": {
+                  color: '#1c2859',
+                }
+              }}
+            >
+              <FacebookIcon />
+            </Link>
+          </Stack>
+          <Typography
+            variant='caption'
+            component='p'
           >
-            <FacebookIcon />
-          </Link> 
-        </Stack>
-        <Typography 
-        variant='caption'
-        component='p' 
-        >
-          &copy; 2022 HBSales Inc.
-        </Typography>
-      </StackColumn>
+            &copy; 2023 FriendEase.id
+          </Typography>
+        </StackColumn>
+      </div>
     </BoxRow>
   )
 }

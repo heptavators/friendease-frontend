@@ -11,8 +11,8 @@ const FooterLink = ({ text }: { text: string }) => {
         fontSize: '0.9rem',
         fontWeight: '400',
         textDecoration: 'none',
+        textTransform: 'none',
         color: '#414141',
-        textTransform: 'capitalize',
         "&:hover": {
           color: '#1c2859',
         }
