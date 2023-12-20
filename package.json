@@ -1,0 +1,84 @@
+{
+  "name": "vital",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/jvidalv/vital#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jvidalv/vital.git"
+  },
+  "author": "Josep Vidal <josepvidalvidal@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jvidalv/vital/issues"
+  },
+  "keywords": [
+    "react",
+    "vite",
+    "typescript",
+    "vitest",
+    "tailwind",
+    "template",
+    "starter",
+    "eslint",
+    "prettier",
+    "husky",
+    "commit-lint"
+  ],
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not IE 11"
+  ],
+  "engines": {
+    "node": ">=14",
+    "yarn": ">=1.22.5"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "test": "vitest",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "postinstall": "husky install"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@heroicons/react": "2.0.18",
+    "@mui/icons-material": "^5.15.1",
+    "@mui/material": "^5.15.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "^6.21.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "17.4.2",
+    "@commitlint/config-conventional": "17.4.2",
+    "@tailwindcss/forms": "0.5.3",
+    "@testing-library/jest-dom": "^6.1.5",
+    "@testing-library/react": "13.4.0",
+    "@types/node": "20.6.5",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "10.4.13",
+    "eslint": "^8.56.0",
+    "eslint-plugin-import": "2.27.4",
+    "eslint-plugin-react": "7.32.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "happy-dom": "^12.10.3",
+    "husky": "8.0.3",
+    "lint-staged": "13.1.0",
+    "postcss": "8.4.21",
+    "prettier": "2.8.2",
+    "tailwindcss": "3.2.4",
+    "typescript": "^5.3.3",
+    "vite": "^4.5.1",
+    "vite-preset-react": "2.3.0",
+    "vitest": "^0.34.6"
+  }
+}
