@@ -9,12 +9,12 @@ export interface Highlight {
 
 export interface Talent {
     talentId: string;
-    description: string;
+    description: string | null;
     verified_status: string;
     rating: string;
     price: number;
     auth: User;
     tags: Tag[];
     highlights: Highlight[];
-    reviews: Review[];
+    reviews?: Review[];
 }

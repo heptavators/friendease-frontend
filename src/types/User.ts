@@ -7,19 +7,23 @@ export interface Customer {
     avatar: string;
 }
 
-export interface User extends Customer {
-    email: string;
+export interface User extends Customer { 
     phone_number: string;
+    user_preferences: string | null;
+    location: Location;
+
+}
+
+export interface AuthenticatedUser extends User {
+    email: string;
+    gender: string;
     bio: string;
     bod: string;
-    gender: string;
     status: string;
     roles: string;
     device_token: string;
-    user_preferences: string | null;
-    location: Location;
-    createdAt: string;
-    updatedAt: string;
+    createdAt?: string;
+    updatedAt?: string;
 }
 
 
