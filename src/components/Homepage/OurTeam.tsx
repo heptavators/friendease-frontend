@@ -74,7 +74,7 @@ export default function OurTeam() {
             <div className="flex justify-center">
                 <div className="flex flex-col gap-3">
                     <p className="text-4xl font-bold text-center mt-16 mb-8">
-                        Tim Kami
+                        FriendEase.id Team
                     </p>
                     <p className="text-xl font-semibold text-slate-400">
 
