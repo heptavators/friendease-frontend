@@ -81,20 +81,20 @@ export default function OurTeam() {
                     </p>
                 </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 my-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 my-8 gap-12">
                 {ourTeamList.map((member: Team) => (
                     <div className="flex flex-col gap-3" key={member.bangkitId}>
                         <img src={member.photoURL} alt="profile" className="mx-auto rounded-full w-1/4" />
                         <p className="text-2xl font-semibold text-center">{member.name}</p>
                         <p className="text-xl font-semibold text-center text-slate-400">{member.path}</p>
                         <div className="flex justify-center gap-8">
-                            <a href={member.primaryEmail} target="_blank" className="my-auto">
+                            <a href={member.primaryEmail} target="_blank" className="my-auto" rel="noreferrer">
                                 <img src="assets/images/icons/gmail.svg" alt="gmail" className="mx-auto w-8" />
                             </a>
-                            <a href={member.linkedIn} target="_blank" className="my-auto">
+                            <a href={member.linkedIn} target="_blank" className="my-auto" rel="noreferrer">
                                 <img src="assets/images/icons/linkedin.svg" alt="linkedin" className="mx-auto w-8" />
                             </a>
-                            <a href={member.github} target="_blank" className="my-auto">
+                            <a href={member.github} target="_blank" className="my-auto" rel="noreferrer">
                                 <img src="assets/images/icons/github.svg" alt="github" className="mx-auto w-8" />
                             </a>
                         </div>
