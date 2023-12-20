@@ -6,11 +6,11 @@ import OurTeam from "components/Homepage/OurTeam";
 export default function Home() {
 
     return (
-        <>
+        <div className="bg-neutralPrimary flex flex-col gap-5">
             <Header />
             <Content />
             <OurTeam/>
             <Footer/>
-        </>
+        </div>
     );
 }

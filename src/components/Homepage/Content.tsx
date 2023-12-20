@@ -1,135 +1,30 @@
-import {
-    Box, Grid, styled, Typography
-} from "@mui/material";
 import imgDetail from '/assets/images/card1.svg';
 import imgDetail2 from '/assets/images/card2.svg';
-import { Link } from 'react-router-dom'
 import ArrowCircleRightRoundedIcon from '@mui/icons-material/ArrowCircleRightRounded';
 
 export default function Content() {
-    const CustomGridItem = styled(Grid)({
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-    })
-
-    const CustomTypography = styled(Typography)({
-        fontSize: '1.1rem',
-        textAlign: 'start',
-        lineHeight: '1.5',
-        color: '#515151',
-        marginTop: '1.5rem',
-    })
-
-    const Title = ({ text, textAlign }: { text: string, textAlign: string }) => {
-        return (
-            <Typography
-                variant='h4'
-                component='h3'
-                sx={{
-                    fontWeight: '700',
-                    textAlign: textAlign,
-                }}
-            >
-                {text}
-            </Typography>
-        )
-    }
     return (
-        <Grid container spacing={{ xs: 4, sm: 4, md: 0 }}
-            sx={{
-                py: 10,
-                px: 2,
+        <div className="max-w-7xl mx-auto my-8 grid grid-cols-1 lg:grid-cols-2 gap-5 p-8">
+            <div className=" bg-neutral rounded-2xl p-8 flex flex-col justify-center shadow-lg">
+                <div className="flex flex-col gap-5 my-auto">
+                    <h1 className="text-4xl font-bold">Bosen sendirian? Cari teman jalan!</h1>
+                    <p className="text-xl">#bersamalebihasyik</p>
+                    <p className="text-xl">Ajak jalan sekarang <ArrowCircleRightRoundedIcon fontSize="large" /></p>
+                </div>
+            </div>
+            <img src={imgDetail} alt="header" className="w-3/4 mx-auto" />
+            <img src={imgDetail2} alt="header" className="w-3/4 mx-auto hidden lg:block" />
+            <div className=" bg-neutral rounded-2xl p-8 flex flex-col justify-center shadow-lg">
+                <div className="flex flex-col gap-5 ">
+                    <h1 className="text-4xl font-bold">Dapatkan promo menarik dari EaseWallet!</h1>
+                    <p className="text-xl">Aktivasinya GRATIS dan dapatkan diskon untuk pesanan pertamamu! S&K Berlaku~</p>
+                    <div>
+                        <button type="button" className="bg-primary rounded-3xl text-white font-bold text-xl py-2 px-4">Coba EaseWallet</button>
+                    </div>
+                </div>
+            </div>
+            <img src={imgDetail2} alt="header" className="w-3/4 mx-auto block lg:hidden" />
 
-            }}
-        >
-            <CustomGridItem item xs={12} sm={8} md={6}
-
-            >
-                <Box component='article'
-                    sx={{
-                        px: 4,
-                    }}
-                >
-                    <Title
-                        text={
-                            'Bosen sendirian? Cari teman jalan!'
-                        }
-                        textAlign={'start'}
-                    />
-                    <CustomTypography>
-                        #bersamalebihasyik
-                    </CustomTypography>
-                    <Typography
-                        variant='h5'
-                        component={Link}
-                        to='/'
-                        sx={{
-                            py: 3,
-                            lineHeight: 1.6,
-                        }}
-                    >
-                        Ajak jalan sekarang <ArrowCircleRightRoundedIcon fontSize="large" />
-                    </Typography>
-                </Box>
-
-            </CustomGridItem>
-
-            <Grid item xs={12} sm={4} md={6}>
-                <img src={imgDetail} alt=""
-                    style={{
-                        width: '100%',
-                    }}
-                />
-            </Grid>
-
-            <Grid item xs={12} sm={4} md={6}
-                sx={{
-                    order: { xs: 4, sm: 4, md: 3 }
-                }}
-            >
-                <img src={imgDetail2} alt=""
-                    style={{
-                        width: "100%",
-                    }}
-                />
-            </Grid>
-
-            <CustomGridItem item xs={12} sm={8} md={6}
-                sx={{
-                    order: { xs: 3, sm: 3, md: 4 }
-                }}
-            >
-                <Box component='article'
-                    sx={{
-                        px: 4,
-                    }}
-                >
-                    <Title
-                        text={
-                            'Dapatkan promo menarik dari EaseWallet'
-
-                        }
-                        textAlign={'start'}
-                    />
-                    <CustomTypography>
-                        Aktivasinya GRATIS dan dapatkan diskon untuk pesanan pertamamu! S&K Berlaku~
-                    </CustomTypography>
-                    <button
-                        style={{
-                            backgroundColor: '#9B274F',
-                            fontSize: '1.1rem',
-                            color: '#fff',
-                            padding: '10px 20px',
-                            border: 'none',
-                            borderRadius: '20px',
-                            marginTop: '20px',
-                        }}
-                    >
-                        Coba EaseWallet
-                    </button>
-                </Box>
-            </CustomGridItem>
-        </Grid>
+        </div>
     )
 }
