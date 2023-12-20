@@ -16,7 +16,7 @@ const ourTeamList = [
         secondaryEmail: "c006bsx3816@bangkit.academy",
         linkedIn: "https://www.linkedin.com/in/alfizdiana-sholikhah-7a06a3222/",
         github: "https://github.com/alfizdiana",
-        photoURL: "assets/images/team/alfiz.jpg"
+        photoURL: "assets/images/team/alfiz.jpeg"
     }, {
         name: "Ahmad Rusdianto Andarina Syakbani",
         bangkitId: "M116BSY0745",

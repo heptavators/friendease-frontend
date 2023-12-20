@@ -35,7 +35,7 @@
     "yarn": ">=1.22.5"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "set PORT=3001 && vite",
     "build": "tsc && vite build",
     "test": "vitest",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",

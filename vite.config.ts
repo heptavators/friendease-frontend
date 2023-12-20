@@ -19,7 +19,11 @@ export default defineConfig((configEnv) => {
       alias: {
         app: resolve(__dirname, "src", "app"),
         components: resolve(__dirname, "src", "components"),
+        data: resolve(__dirname, "src", "data"),
         hooks: resolve(__dirname, "src", "hooks"),
+        layouts : resolve(__dirname, "src", "layouts"),
+        pages: resolve(__dirname, "src", "pages"),
+        types: resolve(__dirname, "src", "types"),
       },
     },
     css: {
