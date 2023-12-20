@@ -8,7 +8,7 @@ export default function Content() {
             <div className=" bg-neutral rounded-2xl p-8 flex flex-col justify-center shadow-lg">
                 <div className="flex flex-col gap-5 my-auto">
                     <h1 className="text-4xl font-bold">Bosen sendirian? Cari teman jalan!</h1>
-                    <p className="text-xl">#bersamalebihasyik</p>
+                    <p className="text-xl font-bold">#bersamalebihasyik</p>
                     <p className="text-xl">Ajak jalan sekarang <ArrowCircleRightRoundedIcon fontSize="large" /></p>
                 </div>
             </div>
