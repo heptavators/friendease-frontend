@@ -1,5 +1,3 @@
-import headerImg from '/assets/images/pexels-kampus-production-5935242.jpg'
-
 export default function Header() {
     return (
         <header className="bg-primary">

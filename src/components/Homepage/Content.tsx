@@ -24,7 +24,6 @@ export default function Content() {
                 </div>
             </div>
             <img src={imgDetail2} alt="header" className="w-3/4 mx-auto block lg:hidden" />
-
         </div>
     )
 }
