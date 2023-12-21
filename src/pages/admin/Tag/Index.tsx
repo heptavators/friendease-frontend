@@ -33,7 +33,6 @@ export default function Index() {
 
     const { data, error, isLoading } = useAuthRequest<Pagination<Tag>>(url, {
         method: 'get',
-        
     });
 
 
@@ -59,8 +58,8 @@ export default function Index() {
         data: data?.data || [],
         manualFiltering: true,
         manualPagination: true,
-        pageCount: data?.info.meta.totalPage || 0,
-        rowCount: data?.info.meta.totalItems || 0,
+        pageCount: data?.info?.meta?.totalPage || 0,
+        rowCount: data?.info?.meta?.totalItems || 0,
         onPaginationChange: setPagination,
         onColumnFiltersChange: setColumnFilters,
         enableGlobalFilter: false,
