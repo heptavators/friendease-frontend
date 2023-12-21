@@ -2,10 +2,12 @@ FROM node:18-alpine
 
 WORKDIR /react-vite-app
 
-EXPOSE 3030
+EXPOSE 3000
 
 COPY package*.json yarn.lock ./
 
-COPY . ./
+RUN yarn install
 
-CMD ["npm", "run", "dev"]
+COPY . .
+
+CMD ["yarn", "run", "dev"]

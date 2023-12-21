@@ -9,7 +9,7 @@ export default defineConfig((configEnv) => {
     plugins: [react()],
     server: {
       host: '0.0.0.0',
-      port: 3030,
+      port: 3000,
     },
     test: {
       globals: true,
