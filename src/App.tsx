@@ -1,23 +1,57 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from 'pages/home';
-import Dashboard from 'pages/admin/Dashboard';
-import { ThemeProvider } from '@mui/material';
-import customMuiTheme from './muiTheme';
-import TalentList from 'pages/admin/Talent';
-import TagList from 'pages/admin/Tag';
+import {
+    createBrowserRouter,
+    RouterProvider,
+    Navigate,
+} from "react-router-dom";
+import Home from "pages/home/Index";
+import Dashboard from "pages/admin/Dashboard";
+import { ThemeProvider } from "@mui/material";
+import customMuiTheme from "./muiTheme";
+import TalentList from "pages/admin/Talent/Index";
+import TagList from "pages/admin/Tag/Index";
+import Login from "pages/admin/Login";
 
+function AdminRoute({children: Children}: React.PropsWithChildren) {
+    let token = localStorage.getItem("authToken");
 
+    if (!token) {
+        return <Navigate to="/admin/login" />;
+    }
+    return Children;
+}
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Home />,
+        children: [],
+    },
+    {
+        path: "/admin",
+        children: [
+            {
+                path: "login",
+                element: <Login />,
+            },
+            {
+                path: "dashboard",
+                element: <AdminRoute><Dashboard /></AdminRoute>,
+            },
+            {
+                path: "talents",
+                element: <AdminRoute><TalentList/></AdminRoute>,
+            },
+            {
+                path: "tags",
+                element: <AdminRoute><TagList /></AdminRoute>,
+            },
+        ],
+    },
+]);
 function App() {
     return (
         <ThemeProvider theme={customMuiTheme}>
-            <BrowserRouter>
-                <Routes>
-                    <Route path='/' element={<Home />} />
-                    <Route path='/admin/dashboard' element={<Dashboard />} />
-                    <Route path='/admin/talents' element={<TalentList />} />
-                    <Route path='/admin/tags' element={<TagList />} />
-                </Routes>
-            </BrowserRouter>
+            <RouterProvider router={router} />
         </ThemeProvider>
     );
 }
