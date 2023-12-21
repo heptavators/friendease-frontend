@@ -4,6 +4,7 @@ import Dashboard from 'pages/admin/Dashboard';
 import { ThemeProvider } from '@mui/material';
 import customMuiTheme from './muiTheme';
 import TalentList from 'pages/admin/Talent';
+import TagList from 'pages/admin/Tag';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
                     <Route path='/' element={<Home />} />
                     <Route path='/admin/dashboard' element={<Dashboard />} />
                     <Route path='/admin/talents' element={<TalentList />} />
+                    <Route path='/admin/tags' element={<TagList />} />
                 </Routes>
             </BrowserRouter>
         </ThemeProvider>

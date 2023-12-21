@@ -13,6 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import SettingsIcon from '@mui/icons-material/Settings';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import HailIcon from '@mui/icons-material/Hail';
+import LabelIcon from '@mui/icons-material/Label';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import ResponsiveNavLink from 'components/ResponsiveNavLink';
 import { useLocation } from 'react-router-dom';
@@ -144,6 +145,17 @@ export default function AdminLayout({
                             <HailIcon fontSize="large" />
                         </span>
                         Talent
+                    </ResponsiveNavLink>
+                </li>
+                <li>
+                    <ResponsiveNavLink
+                        href={"/admin/tags"}
+                        active={location.pathname.startsWith('/admin/tags')}
+                    >
+                        <span className={'mr-4'}>
+                            <LabelIcon fontSize="large" />
+                        </span>
+                        Tag
                     </ResponsiveNavLink>
                 </li>
             </ul>
