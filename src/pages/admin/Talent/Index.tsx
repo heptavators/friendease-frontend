@@ -80,7 +80,7 @@ export default function Index() {
 
     return (
         <AdminTableLayout title="Talent">
-            <div className="">
+            <div className="mt-6 p-7 text-gray-500 shadow-2xl sm:rounded-3xl bg-white shadow-pink-400/50 flex flex-col gap-3">
                 <MaterialReactTable table={table} />
             </div>
         </AdminTableLayout>
