@@ -1,4 +1,3 @@
-import axios from "axios";
 import AdminTableLayout from "layouts/AdminTableLayout";
 import useAuthRequest from "hooks/useAuthRequest";
 import { useMemo } from "react";
@@ -9,16 +8,13 @@ import {
     type MRT_ColumnDef,
 } from 'material-react-table';
 import ratingColorizer from "helpers/ratingColorizer";
-import data from "./Dummy";
+import { Pagination } from "types/Pagination";
 
 export default function Index() {
 
-    // Mock the request
-    const isLoading = false;
-
-    // const { data, error, isLoading } = useAuthRequest('talent-recommendation', {
-    //     method: 'get',
-    // });
+    const { data, error, isLoading } = useAuthRequest<Pagination<Talent>>('talent', {
+        method: 'get',
+    });
 
     const columns = useMemo<MRT_ColumnDef<Talent>[]>(
         () => [
@@ -66,17 +62,17 @@ export default function Index() {
                 size: 150,
             },
             {
-                accessorKey: 'price', 
+                accessorKey: 'price',
                 header: 'Biaya',
                 size: 200,
             },
         ],
-        [],
+        [JSON.stringify(data)],
     );
 
     const table = useMaterialReactTable<Talent>({
         columns,
-        data,
+        data : data?.data ?? [],
         state: {
             isLoading,
         },
