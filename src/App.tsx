@@ -10,8 +10,11 @@ import customMuiTheme from "./muiTheme";
 import TalentList from "pages/admin/Talent/Index";
 import TagList from "pages/admin/Tag/Index";
 import Login from "pages/admin/Login";
+import Error from "pages/midtrans/error";
+import Finish from "pages/midtrans/finish";
+import Unfinish from "pages/midtrans/unfinisih";
 
-function AdminRoute({children: Children}: React.PropsWithChildren) {
+function AdminRoute({ children: Children }: React.PropsWithChildren) {
     let token = localStorage.getItem("authToken");
 
     if (!token) {
@@ -27,6 +30,23 @@ const router = createBrowserRouter([
         children: [],
     },
     {
+        path: "/midtrans-redirect",
+        children: [
+            {
+                path: "finish",
+                element: <Finish />,
+            },
+            {
+                path: "unfinish",
+                element: <Unfinish />,
+            },
+            {
+                path: "error",
+                element: <Error />,
+            },
+        ],
+    },
+    {
         path: "/admin",
         children: [
             {
@@ -39,7 +59,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "talents",
-                element: <AdminRoute><TalentList/></AdminRoute>,
+                element: <AdminRoute><TalentList /></AdminRoute>,
             },
             {
                 path: "tags",
