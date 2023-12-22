@@ -10,7 +10,7 @@ import {
 } from '@mui/material';
 import MuiDrawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
-import SettingsIcon from '@mui/icons-material/Settings';
+// import SettingsIcon from '@mui/icons-material/Settings';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import HailIcon from '@mui/icons-material/Hail';
 import LabelIcon from '@mui/icons-material/Label';
@@ -96,14 +96,14 @@ const Drawer = styled(MuiDrawer, {
     }),
 }));
 
-function logout(e: React.FormEvent) {
-    e.preventDefault();
+// function logout(e: React.FormEvent) {
+//     e.preventDefault();
 
-}
+// }
 
 export default function AdminLayout({
-    title,
-    renderHeader,
+    // title,
+    // renderHeader,
     children,
 }: PropsWithChildren<Props>) {
     const [isSidebarOpen, setIsSidebarOpen] = React.useState(true);

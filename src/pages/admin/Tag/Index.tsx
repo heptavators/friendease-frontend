@@ -35,6 +35,9 @@ export default function Index() {
         method: 'get',
     });
 
+    console.log(error);
+
+
 
     const columns = useMemo<MRT_ColumnDef<Tag>[]>(
         () => [
