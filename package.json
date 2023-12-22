@@ -22,7 +22,6 @@
     "starter",
     "eslint",
     "prettier",
-    "husky",
     "commit-lint"
   ],
   "browserslist": [
@@ -35,12 +34,12 @@
     "yarn": ">=1.22.5"
   },
   "scripts": {
-    "dev": "set PORT=3001 && vite",
+    "dev": "vite --port 3001",
+    "start" : "vite preview --port 3001",
     "build": "tsc && vite build",
     "test": "vitest",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "postinstall": "husky install"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -78,7 +77,6 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "happy-dom": "^12.10.3",
-    "husky": "8.0.3",
     "lint-staged": "13.1.0",
     "postcss": "8.4.21",
     "prettier": "2.8.2",
